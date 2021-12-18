@@ -1,0 +1,29 @@
+PODS:
+  - Realm (10.20.0):
+    - Realm/Headers (= 10.20.0)
+  - Realm/Headers (10.20.0)
+  - RealmSwift (10.20.0):
+    - Realm (= 10.20.0)
+  - SNOMEDKit (0.1.0):
+    - RealmSwift (>= 10.11.0)
+
+DEPENDENCIES:
+  - SNOMEDKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  SNOMEDKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
+  RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
+  SNOMEDKit: 1c27fed7c08377aefd8905320b77a9f2db0c4fca
+
+PODFILE CHECKSUM: f2c4f7046b07f00bd3eb1cc684359f7d758db0c9
+
+COCOAPODS: 1.11.2
