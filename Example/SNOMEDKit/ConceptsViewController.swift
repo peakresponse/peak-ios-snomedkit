@@ -73,6 +73,9 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
 
     func hideSpinner() {
         _ = navigationItem.leftBarButtonItems?.popLast()
+        for item in navigationItem.leftBarButtonItems ?? [] {
+            item.isEnabled = true
+        }
         for item in navigationItem.rightBarButtonItems ?? [] {
             item.isEnabled = true
         }
@@ -130,19 +133,50 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
             showSpinner()
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 let realm = SCTRealm.open()
-                url.read { (line, _) in
-                    let cols = line.split(separator: "|", omittingEmptySubsequences: false)
-                    if String(cols[7]) == "False" {
-                        let concept = SCTConcept()
-                        concept.id = String(cols[0])
-                        var name = String(cols[1])
-                        if name.hasPrefix("'") && name.hasSuffix("'") {
-                            name = String(name[name.index(name.startIndex, offsetBy: 1)...name.index(name.endIndex, offsetBy: -2)])
-                            name = name.replacingOccurrences(of: "''", with: "'")
+                if url.path.contains("SNOMEDCT_CORE_SUBSET_") {
+                    url.read { (line, _) in
+                        let cols = line.split(separator: "|", omittingEmptySubsequences: false)
+                        if String(cols[7]) == "False" {
+                            let concept = SCTConcept()
+                            concept.id = String(cols[0])
+                            var name = String(cols[1])
+                            if name.hasPrefix("'") && name.hasSuffix("'") {
+                                name = String(name[name.index(name.startIndex, offsetBy: 1)...name.index(name.endIndex, offsetBy: -2)])
+                                name = name.replacingOccurrences(of: "''", with: "'")
+                            }
+                            concept.name = name
+                            try! realm.write {
+                                realm.add(concept, update: .modified)
+                            }
                         }
-                        concept.name = name
-                        try! realm.write {
-                            realm.add(concept, update: .modified)
+                    }
+                } else if url.path.contains("sct2_Description_") {
+                    // pull in the procedure and regime/therapy concept FSNs
+                    url.read { (line, _) in
+                        let cols = line.split(separator: "\t", omittingEmptySubsequences: false)
+                        if String(cols[2]) == "1", String(cols[6]) == "900000000000003001" {
+                            let concept = SCTConcept()
+                            concept.id = String(cols[4])
+                            let name = String(cols[7])
+                            if name.hasSuffix(" (procedure)") || name.hasSuffix(" (regime/therapy)") {
+                                concept.name = name
+                                try! realm.write {
+                                    realm.add(concept, update: .modified)
+                                }
+                            }
+                        }
+                    }
+                    // check against the concepts file for deactivation and remove
+                    let newUrl = URL(fileURLWithPath: url.path.replacingOccurrences(of: "sct2_Description_", with: "sct2_Concept_").replacingOccurrences(of: "-en_", with: "_"))
+                    newUrl.read { (line, _) in
+                        let cols = line.split(separator: "\t", omittingEmptySubsequences: false)
+                        if String(cols[2]) == "0" {
+                            let id = String(cols[0])
+                            if let concept = realm.object(ofType: SCTConcept.self, forPrimaryKey: id) {
+                                try! realm.write {
+                                    realm.delete(concept)
+                                }
+                            }
                         }
                     }
                 }

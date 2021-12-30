@@ -37,7 +37,7 @@ extension URL {
         while getline(&cline, &cap, file) > 0 {
             if let crow = cline,
                // the output line may contain '\n' that's why we filtered it
-               let s = String(utf8String: crow)?.filter({($0.asciiValue ?? 0) >= 32}) {
+               let s = String(utf8String: crow)?.filter({($0.asciiValue ?? 0) >= 32 || ($0.asciiValue ?? 0) == 9}) {
                 line(s, index)
             }
             index += 1
