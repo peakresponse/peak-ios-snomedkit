@@ -97,10 +97,13 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
         showSpinner()
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             let realm = SCTRealm.open()
-            let documentDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-                                                                 appropriateFor: nil, create: false)
-            let url = documentDirectory?.appendingPathComponent( "snomed.realm")
+            let fileManager = FileManager.default
+            let documentDirectory = try? fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let url = documentDirectory?.appendingPathComponent( "SNOMED.realm")
             if let url = url {
+                if fileManager.fileExists(atPath: url.path) {
+                    try? fileManager.removeItem(at: url)
+                }
                 do {
                     try realm.writeCopy(toFile: url, encryptionKey: nil)
                     DispatchQueue.main.async { [weak self] in

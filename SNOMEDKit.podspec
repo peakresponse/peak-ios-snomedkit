@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SNOMEDKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SNOMEDKit.'
+  s.summary          = 'SNOMEDKit is a library for embedding SNOMED codes as a Realm database.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,26 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  SNOMEDKit is a library for embedding SNOMED codes as a Realm database. The example
+  application included with the library can be run on a Mac OS desktop to read SNOMED
+  code files and generate a compacted Realm database that can be bundled into an iOS app.
                        DESC
 
   s.homepage         = 'https://github.com/peakresponse/peak-ios-snomedkit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'LGPL', :file => 'LICENSE.md' }
   s.author           = { 'Francis Li' => 'francis@peakresponse.net' }
   s.source           = { :git => 'https://github.com/peakresponse/peak-ios-snomedkit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.4'
+  s.swift_versions = ['4.0', '4.2', '5.0']
 
   s.source_files = 'SNOMEDKit/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SNOMEDKit' => ['SNOMEDKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'RealmSwift', '>=10.11.0'
 end
