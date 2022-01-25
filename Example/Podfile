@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '12.4'
+
+target 'SNOMEDKit_Example' do
+  pod 'RealmSwift', '10.11.0'
+  pod 'SNOMEDKit', :path => '../'
+
+  target 'SNOMEDKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
