@@ -64,9 +64,9 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
         }
         var spinner: UIActivityIndicatorView
         if #available(iOS 13.0, *) {
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .medium)
+            spinner = UIActivityIndicatorView(style: .medium)
         } else {
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            spinner = UIActivityIndicatorView(style: .gray)
         }
         spinner.startAnimating()
         navigationItem.leftBarButtonItems?.append(UIBarButtonItem(customView: spinner))
