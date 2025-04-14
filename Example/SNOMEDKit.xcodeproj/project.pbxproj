@@ -3,19 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4552A992276C09C700BB18FE /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552A991276C09C700BB18FE /* URLExtension.swift */; };
-		48D1F2E5230E35A5C3073AB2 /* Pods_SNOMEDKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A3FB2329E370C0C6FDD185 /* Pods_SNOMEDKit_Example.framework */; };
+		459DC4DA2DADC2F800761142 /* SNOMEDKit in Frameworks */ = {isa = PBXBuildFile; productRef = 459DC4D92DADC2F800761142 /* SNOMEDKit */; };
+		459DC4DC2DADC2FB00761142 /* SNOMEDKit in Frameworks */ = {isa = PBXBuildFile; productRef = 459DC4DB2DADC2FB00761142 /* SNOMEDKit */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ConceptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ConceptsViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		BD77A5EEB683A22A90069135 /* Pods_SNOMEDKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CB1D7A6365459AA9EFDAA7 /* Pods_SNOMEDKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D6440D468E969ED2ABD1FE8 /* Pods-SNOMEDKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNOMEDKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-SNOMEDKit_Example/Pods-SNOMEDKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		4552A98B276BED7500BB18FE /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		4552A98C276BEDE100BB18FE /* SNOMEDKit_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SNOMEDKit_Example.entitlements; sourceTree = "<group>"; };
 		4552A991276C09C700BB18FE /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SNOMEDKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNOMEDKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,13 +41,6 @@
 		607FACE51AFB9204008FA782 /* SNOMEDKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNOMEDKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7C2FD8D7E3C62433D5DA0105 /* Pods-SNOMEDKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNOMEDKit_Example.release.xcconfig"; path = "Target Support Files/Pods-SNOMEDKit_Example/Pods-SNOMEDKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		89CB1D7A6365459AA9EFDAA7 /* Pods_SNOMEDKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNOMEDKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A3FB2329E370C0C6FDD185 /* Pods_SNOMEDKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNOMEDKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ED8297C510F18E1E42E09EB /* Pods-SNOMEDKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNOMEDKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SNOMEDKit_Tests/Pods-SNOMEDKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A3B547FD63C87D235A4D0E63 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C7D3031035B5E1D23FB763CC /* Pods-SNOMEDKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNOMEDKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-SNOMEDKit_Tests/Pods-SNOMEDKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D8F89E1AE220588E67CEB738 /* SNOMEDKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SNOMEDKit.podspec; path = ../SNOMEDKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D1F2E5230E35A5C3073AB2 /* Pods_SNOMEDKit_Example.framework in Frameworks */,
+				459DC4DC2DADC2FB00761142 /* SNOMEDKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,29 +56,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD77A5EEB683A22A90069135 /* Pods_SNOMEDKit_Tests.framework in Frameworks */,
+				459DC4DA2DADC2F800761142 /* SNOMEDKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5AE0A10947DD1176A0FC048C /* Pods */ = {
+		459DC4D82DADC2F800761142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3D6440D468E969ED2ABD1FE8 /* Pods-SNOMEDKit_Example.debug.xcconfig */,
-				7C2FD8D7E3C62433D5DA0105 /* Pods-SNOMEDKit_Example.release.xcconfig */,
-				9ED8297C510F18E1E42E09EB /* Pods-SNOMEDKit_Tests.debug.xcconfig */,
-				C7D3031035B5E1D23FB763CC /* Pods-SNOMEDKit_Tests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		5CB95169551B4C7D7CC6533B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				94A3FB2329E370C0C6FDD185 /* Pods_SNOMEDKit_Example.framework */,
-				89CB1D7A6365459AA9EFDAA7 /* Pods_SNOMEDKit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,12 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				4552A98C276BEDE100BB18FE /* SNOMEDKit_Example.entitlements */,
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SNOMEDKit */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				459DC4D82DADC2F800761142 /* Frameworks */,
 				607FACD11AFB9204008FA782 /* Products */,
-				5AE0A10947DD1176A0FC048C /* Pods */,
-				5CB95169551B4C7D7CC6533B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,16 +130,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				4552A98B276BED7500BB18FE /* LICENSE.md */,
-				D8F89E1AE220588E67CEB738 /* SNOMEDKit.podspec */,
-				A3B547FD63C87D235A4D0E63 /* README.md */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,12 +137,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SNOMEDKit_Example" */;
 			buildPhases = (
-				1DA99D457BAB94071474750E /* [CP] Check Pods Manifest.lock */,
-				45C4B8062AE2F70200AF9554 /* ShellScript */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				3A571B4554B92F58EDC1840A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +154,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SNOMEDKit_Tests" */;
 			buildPhases = (
-				56241D403377B014FDEBDEC5 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -239,6 +201,9 @@
 				Base,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				459DC4DD2DADC5C000761142 /* XCLocalSwiftPackageReference "../../snomedkit" */,
+			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,92 +233,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1DA99D457BAB94071474750E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SNOMEDKit_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A571B4554B92F58EDC1840A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SNOMEDKit_Example/Pods-SNOMEDKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SNOMEDKit/SNOMEDKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SNOMEDKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SNOMEDKit_Example/Pods-SNOMEDKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45C4B8062AE2F70200AF9554 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --fix\n";
-		};
-		56241D403377B014FDEBDEC5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SNOMEDKit_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -512,14 +391,12 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D6440D468E969ED2ABD1FE8 /* Pods-SNOMEDKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SNOMEDKit_Example.entitlements;
 				DEVELOPMENT_TEAM = 4575KXUFK2;
 				INFOPLIST_FILE = SNOMEDKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,14 +413,12 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C2FD8D7E3C62433D5DA0105 /* Pods-SNOMEDKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SNOMEDKit_Example.entitlements;
 				DEVELOPMENT_TEAM = 4575KXUFK2;
 				INFOPLIST_FILE = SNOMEDKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,7 +435,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9ED8297C510F18E1E42E09EB /* Pods-SNOMEDKit_Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4575KXUFK2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -572,7 +446,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +462,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7D3031035B5E1D23FB763CC /* Pods-SNOMEDKit_Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4575KXUFK2;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -596,7 +469,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,6 +514,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		459DC4D72DADC2EF00761142 /* XCLocalSwiftPackageReference "../../SNOMEDKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../SNOMEDKit;
+		};
+		459DC4DD2DADC5C000761142 /* XCLocalSwiftPackageReference "../../snomedkit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../snomedkit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		459DC4D92DADC2F800761142 /* SNOMEDKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 459DC4D72DADC2EF00761142 /* XCLocalSwiftPackageReference "../../SNOMEDKit" */;
+			productName = SNOMEDKit;
+		};
+		459DC4DB2DADC2FB00761142 /* SNOMEDKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 459DC4D72DADC2EF00761142 /* XCLocalSwiftPackageReference "../../SNOMEDKit" */;
+			productName = SNOMEDKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }
