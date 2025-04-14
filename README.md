@@ -23,11 +23,9 @@ option is enabled in the toolbar.
 
 ## Installation
 
-1. Include SNOMEDKit in your iOS app project using [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
+1. Include ICD10Kit in your iOS app project using Swift Package Manger, referencing this repository:
 
-  ```ruby
-  pod 'SNOMEDKit'
-  ```
+  https://github.com/peakresponse/peak-ios-icd10kit
 
 2. Add the exported Realm database file generated previously (i.e. `SNOMED.realm`) to your iOS app project.
 
@@ -70,7 +68,7 @@ Francis Li, francis@peakresponse.net
 ## License
 
 SNOMEDKit  
-Copyright (C) 2022 Peak Response Inc.
+Copyright &copy; 2025 Peak Response Inc.
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
