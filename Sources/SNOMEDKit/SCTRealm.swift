@@ -5,22 +5,23 @@
 //  Created by Francis Li on 12/16/21.
 //
 
+import Foundation
 import RealmSwift
 
 open class SCTRealm {
-    public static var main: Realm!
-    public static var mainURL: URL?
-    public static var mainMemoryIdentifier: String? = "snomed.realm"
-    public static var isMainReadOnly = false
+    @MainActor public static var main: Realm!
+    @MainActor public static var mainURL: URL?
+    @MainActor public static var mainMemoryIdentifier: String? = "snomed.realm"
+    @MainActor public static var isMainReadOnly = false
     
-    public static func configure(url: URL?, isReadOnly: Bool) {
+    @MainActor public static func configure(url: URL?, isReadOnly: Bool) {
         SCTRealm.main = nil
         SCTRealm.mainURL = url
         SCTRealm.isMainReadOnly = isReadOnly
         SCTRealm.mainMemoryIdentifier = url != nil ? nil : "snomed.realm"
     }
 
-    public static func open() -> Realm {
+    @MainActor public static func open() -> Realm {
         if Thread.current.isMainThread && SCTRealm.main != nil {
             if !SCTRealm.main.configuration.readOnly {
                 SCTRealm.main.refresh()

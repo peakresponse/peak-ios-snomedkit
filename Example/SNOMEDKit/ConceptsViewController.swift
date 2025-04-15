@@ -6,6 +6,7 @@
 //  Copyright (c) 2021 Francis Li. All rights reserved.
 //
 
+import MobileCoreServices
 import UIKit
 import RealmSwift
 import SNOMEDKit
@@ -63,9 +64,9 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
         }
         var spinner: UIActivityIndicatorView
         if #available(iOS 13.0, *) {
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .medium)
+            spinner = UIActivityIndicatorView(style: .medium)
         } else {
-            spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            spinner = UIActivityIndicatorView(style: .gray)
         }
         spinner.startAnimating()
         navigationItem.leftBarButtonItems?.append(UIBarButtonItem(customView: spinner))
@@ -82,13 +83,23 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
     }
 
     @IBAction func importPressed() {
-        let picker = UIDocumentPickerViewController(documentTypes: [String(kUTTypeText)], in: .open)
+        var picker: UIDocumentPickerViewController!
+        if #available(iOS 14, *) {
+            picker = UIDocumentPickerViewController(forOpeningContentTypes: [.text])
+        } else {
+            picker = UIDocumentPickerViewController(documentTypes: [kUTTypeText as String], in: .open)
+        }
         picker.delegate = self
         present(picker, animated: true)
     }
 
     @IBAction func openPressed() {
-        let picker = UIDocumentPickerViewController(documentTypes: [String(kUTTypeItem)], in: .open)
+        var picker: UIDocumentPickerViewController!
+        if #available(iOS 14, *) {
+            picker = UIDocumentPickerViewController(forOpeningContentTypes: [.item])
+        } else {
+            picker = UIDocumentPickerViewController(documentTypes: [kUTTypeItem as String], in: .open)
+        }
         picker.delegate = self
         present(picker, animated: true)
     }
@@ -108,7 +119,9 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
                     try realm.writeCopy(toFile: url, encryptionKey: nil)
                     DispatchQueue.main.async { [weak self] in
                         let picker = UIDocumentPickerViewController(url: url, in: .moveToService)
-                        picker.shouldShowFileExtensions = true
+                        if #available(iOS 13.0, *) {
+                            picker.shouldShowFileExtensions = true
+                        }
                         self?.present(picker, animated: true)
                     }
                 } catch {
