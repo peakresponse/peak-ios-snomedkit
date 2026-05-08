@@ -160,9 +160,11 @@ class ConceptsViewController: UITableViewController, UIDocumentPickerDelegate {
                                 name = String(name[name.index(name.startIndex, offsetBy: 1)...name.index(name.endIndex, offsetBy: -2)])
                                 name = name.replacingOccurrences(of: "''", with: "'")
                             }
-                            concept.name = name
-                            try! realm.write {
-                                realm.add(concept, update: .modified)
+                            if name.hasSuffix(" (disorder)") || name.hasSuffix(" (clinical findings)") || name.hasSuffix(" (procedure)") || name.hasSuffix(" (regime/therapy)") {
+                                concept.name = name
+                                try! realm.write {
+                                    realm.add(concept, update: .modified)
+                                }
                             }
                         }
                     }
